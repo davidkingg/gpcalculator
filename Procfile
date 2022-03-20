@@ -1,1 +1,1 @@
-web: gunicorn gpcalculator.wsgi:application --log-file - --log-level debug
+web: gunicorn gp_calculator.wsgi:application --log-file - --log-level debug
