@@ -1,0 +1,31 @@
+<h2>
+    courses offered for {{year}} session and {{semester}} semester
+</h2><br>
+<div class='row'>
+    <div class='col-md'>
+        <div class='card card-body'>
+            <table class='table table-sm'>
+                <tr>
+                    <th>course name</th>
+                    <th>grade</th>
+                    <th>semester</th>
+                    <th>unit</th>
+                </tr>
+                {% for course in courses %}
+                <tr>
+                    <td>{{course.name}}</td>
+                    <td>{{course.grade}}</td>
+                    <td>{{course.semsester}}</td>
+                    <td>{{course.unit}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+    </div>
+</div><br>
+
+<h1>
+    your final semester GP is {{gp}}
+</h1>

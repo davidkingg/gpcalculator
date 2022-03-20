@@ -1,0 +1,43 @@
+<div class="where_togo_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3">
+                <div class="form_area">
+                    <h3>input login details</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="search_wrap">
+                    <form class="search_form" action="GPpage" method='post'>
+                        {% csrf_token%}
+                        <div class="input_field">
+                            <select name="year" required='required'>
+                                <option data-display=""></option>
+                                {% for year in  yearss %}
+                                <option value="{{ year }}">{{ year }}</option>
+                                {% endfor %}
+                            </select>
+                        </div><br>
+                        <div class="input_field">
+                            <select name='semester' required='required'>
+                                <option data-display=""></option>
+                                <option data-display="semester">semester</option>
+                                <option value="1">1st semester</option>
+                                <option value="2">2nd semester</option>
+                            </select>
+                        </div><br>
+                        {% if user.is_authenticated %}
+                        <div class="search_btn">
+                            <button class="boxed-btn4 " type="text" >Login</button>
+                        </div>
+                        {% else %}
+                        <div class="search_btn">
+                            <button class="boxed-btn4 " type="submit" >Login</button>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
