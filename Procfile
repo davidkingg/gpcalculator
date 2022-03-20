@@ -1,1 +1,1 @@
-web: gunicorn locallibrary.wsgi --log-file -
+web: gunicorn gp_calculator.wsgi:application --log-file - --log-level debug
