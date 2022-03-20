@@ -1,3 +1,1 @@
-web: gunicorn gp_calculator.wsgi:application --log-file - --log-level debug
-python manage.py collectstatic --noinput
-manage.py migrate
+web: gunicorn locallibrary.wsgi --log-file -
