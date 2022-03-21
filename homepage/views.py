@@ -51,8 +51,8 @@ def register(requests):
                 user=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,email=email,password=password1)
                 user.save();
                 print('crated')
-                group=Group.objects.get(name='student')
-                user.groups.add(group)
+                #group=Group.objects.get(name='student')
+                #user.groups.add(group)
                 student.objects.create(user=user,name=first_name,matric=last_name)
                 messages.success(requests ,'succesfully created an account')
                 return redirect('/login',)
